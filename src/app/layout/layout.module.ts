@@ -2,17 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ROUTES } from './layout.routes';
 import { LayoutComponent } from './layout.component';
-import { SidebarModule } from 'primeng/sidebar';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import {ButtonModule} from 'primeng/button';
+import { AppSidebarModule } from './sidebar/app-sidebar.module';
 
 @NgModule({
-  declarations: [LayoutComponent,SidebarComponent],
+  // entryComponents:[LayoutComponent],
+  declarations: [LayoutComponent],
   imports: [
     CommonModule,
     ROUTES,
-    SidebarModule,
-    ButtonModule
+    AppSidebarModule,
   ]
 })
 export class LayoutModule { }
